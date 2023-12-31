@@ -57,9 +57,9 @@ if __name__ == "__main__":
     script_location = os.path.dirname(os.path.abspath(__file__))
     book_dir = os.path.join(script_location, 'books')
     if not os.path.exists(book_dir):
-        print("No Book directory... Creating Book Directory...")
+        print("No 'books' directory found... Creating 'books' Directory...")
         os.makedirs(book_dir)
-        print("Done. Please Place your books in the 'book' directory to get a report of each book.")
+        print("Done. Please Place your books in the 'books' directory to get a report of each book.")
         print("Each book MUST be in .txt format")
     books = [ book for book in os.listdir(book_dir) if book.endswith('.txt') ]
     for book in books:
